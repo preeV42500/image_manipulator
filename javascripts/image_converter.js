@@ -26,7 +26,7 @@ var manipulator = { // methods for manipulating images
     var image_data = this.getData(),
         gray_data;
 
-    for (var i = 0, len = image_data.length; i < len; i += 4) {
+    for (var i = 0, len = image_data.data.length; i < len; i += 4) {
       // convert red, green, and blue channel values to grayscale values by multiplying them by respective weights
       gray_data = image_data.data[i] * 0.3086 + image_data.data[i + 1] * 0.6094 + image_data.data[i + 2] * 0.0820;
       // set red, green and blue values to grayscale value
